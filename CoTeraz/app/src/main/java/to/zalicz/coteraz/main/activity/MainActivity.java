@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import to.zalicz.coteraz.R;
+import to.zalicz.coteraz.main.DownloadActivity;
 import to.zalicz.coteraz.main.fragments.MainWindowFragment;
 import to.zalicz.coteraz.main.fragments.MapDetailsFragment;
 import to.zalicz.coteraz.main.fragments.MapFragment;
@@ -52,6 +53,18 @@ public class MainActivity extends AppCompatActivity implements onFragmentClick {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
         fragmentTransaction.replace(R.id.activity_root, MapDetailsFragment.newInstance());
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
+
+    }
+    @Override
+    public void navigatetoDownload() {
+
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+        fragmentTransaction.replace(R.id.activity_root, DownloadActivity.newInstance());
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
 

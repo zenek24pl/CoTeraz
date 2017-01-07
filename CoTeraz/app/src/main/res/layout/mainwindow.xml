@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <Button
+        android:text="Glodny"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:id="@+id/btEat"
+        android:layout_below="@+id/imMain"
+        android:layout_alignStart="@+id/imMain" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imMain"
+        android:layout_marginTop="40dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/nowwhat"
+        android:scaleType="fitCenter" />
+
+    <Button
+        android:text="Zmeczony"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="71dp"
+        android:id="@+id/btTired"
+        android:layout_below="@+id/btEat"
+        android:layout_alignStart="@+id/btEat" />
+
+    <Button
+        android:text="Znudzony"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btBoredd"
+        android:layout_marginTop="11dp"
+        android:layout_below="@+id/btEat"
+        android:layout_alignStart="@+id/btEat" />
+
+</RelativeLayout>

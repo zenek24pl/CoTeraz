@@ -9,6 +9,6 @@ import android.os.Bundle;
 public interface onFragmentClick {
     void navigatetoMap();
     void navigatetoMarkerDetails();
-
+    void navigatetoDownload();
 
 }
