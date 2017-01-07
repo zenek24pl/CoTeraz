@@ -89,12 +89,13 @@ public class MainWindowFragment extends Fragment implements View.OnClickListener
                 Toast.makeText(getActivity(), "tired", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.imMain:
-               // if(eat&&bored){
-                    mapListener.navigatetoMap();
-              //  }
-              //  else if(eat){
-               //     mapListener.navigatetoMarkerDetails();
-              //  }
+                mapListener.navigatetoDownload();
+          //      if(eat&&bored){
+            //        mapListener.navigatetoMap();
+              // }
+                //if(tired){
+                 //  mapListener.navigatetoMarkerDetails();
+               // }
               //  else if(tired){
                //     mapListener.navigatetoMap();
                // }
