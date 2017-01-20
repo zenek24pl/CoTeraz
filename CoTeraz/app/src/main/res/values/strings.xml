@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Merchant - Full</string>
+    <string name="app_name">Co Teraz</string>
     <string name="payment_method">Sposób zapłaty</string>
     <string name="login_activity_title">Ogrodopol - logowanie</string>
     <string name="email">E-mail</string>
@@ -21,6 +21,7 @@
     <string name="for_shopping_in_ogrodopol">za zakupy w Ogrodopol</string>
     <string name="ups_text">Ups...</string>
     <string name="something_went_wrong">coś poszło nie tak</string>
-    <string name="an_error_ocurred_during_payment">Wystąpił błąd podczas realizacji płatności. Proszę spróbować ponownie.</string>
+    <string name="error_ocurred_during_payment">Wystąpił błąd podczas realizacji płatności. Proszę spróbować ponownie.</string>
     <string name="back_to_checkout">Wróć do koszyka</string>
+    <string name="title_activity_maps">Map</string>
 </resources>
