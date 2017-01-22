@@ -10,7 +10,12 @@ android {
             keyPassword 'kapikapi'
             storeFile file('android2.jks')
             storePassword 'kapikapi'
-
+        }
+        config1 {
+            keyAlias 'Nowy'
+            keyPassword 'android'
+            storeFile file('androidn.jks')
+            storePassword 'android'
         }
     }
     dexOptions {
@@ -19,24 +24,29 @@ android {
     compileSdkVersion 25
     buildToolsVersion "25.0.0"
     defaultConfig {
-        applicationId "to.zalicz.coteraz"
+        applicationId 'now.zaliczto.coteraz'
         minSdkVersion 17
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
-
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.config1
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.config
+            signingConfig signingConfigs.config1
         }
         debug {
-            signingConfig signingConfigs.config
+            signingConfig signingConfigs.config1
         }
+    }
+    dataBinding {
+        enabled = true
+    }
+    productFlavors {
     }
 }
 
@@ -45,46 +55,34 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:support-v4:25.0.1'
-    compile 'com.android.support:appcompat-v7:25.0.1'
-    testCompile 'junit:junit:4.12'
-    compile 'com.google.android.gms:play-services:9.8.0'
-    compile 'com.google.code.gson:gson:2.6.2'
-    compile 'com.squareup.retrofit2:retrofit:2.1.0'
-    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
-
-    compile 'com.squareup.okhttp:okhttp:2.7.2'
-    compile 'com.squareup.okhttp3:logging-interceptor:3.3.1'
-
-
     apt "com.github.Raizlabs.DBFlow:dbflow-processor:${dbflow_version}"
     compile "com.github.Raizlabs.DBFlow:dbflow-core:${dbflow_version}"
     compile "com.github.Raizlabs.DBFlow:dbflow:${dbflow_version}"
+    compile('com.payu.android.sdk:payment-library-full:1.3.10') {
+        exclude group: 'com.android.support', module: 'support-v4'
+        exclude group: 'org.jetbrains', module: 'annotations'
+    }
+    compile('com.payu.android.sdk:payment-library-widget:1.3.10') {
+        exclude group: 'com.android.support', module: 'support-v4'
+        exclude group: 'org.jetbrains', module: 'annotations'
+    }
+
+    compile 'com.android.support:gridlayout-v7:25.1.0'
+    compile 'com.android.support:support-v4:25.1.0'
+    compile 'com.android.support:appcompat-v7:25.1.0'
+    compile 'com.google.android.gms:play-services:10.0.1'
+    compile 'com.google.code.gson:gson:2.6.2'
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.squareup.okhttp:okhttp:2.7.2'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.3.1'
     compile 'org.parceler:parceler-api:1.1.1'
+    compile 'com.android.support:design:25.1.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha9'
+    compile 'joda-time:joda-time:2.9.6'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.paypal.sdk:paypal-android-sdk:2.14.2'
+    testCompile 'junit:junit:4.12'
     apt 'org.parceler:parceler:1.1.1'
-
-    compile('com.payu.android.sdk:payment-library-full:1.3.8') {
-        exclude group: 'com.android.support', module: 'support-v4'
-        exclude group: 'org.jetbrains', module: 'annotations'
-    }
-
-    compile('com.payu.android.sdk:payment-library-widget:1.3.8') {
-        exclude group: 'com.android.support', module: 'support-v4'
-        exclude group: 'org.jetbrains', module: 'annotations'
-    }
-
-    apt libraries.lombok
-    apt libraries.dagger_compiler
-    provided libraries.lombok
-    compile libraries.guava
-    compile libraries.timber
-    compile libraries.butterknife
-    compile libraries.picasso
-    compile libraries.android_support
-    compile libraries.recycler
-    compile libraries.cardview
-    compile libraries.dagger
-    compile libraries.jetbrains
-    compile libraries.edittext
 }
 

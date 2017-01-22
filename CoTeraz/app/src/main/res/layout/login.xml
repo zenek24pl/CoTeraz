@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/loginid"
+    android:orientation="vertical">
+
+
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#febd9f"
+        android:inputType="textPersonName"
+        android:hint="Name"
+        android:ems="10"
+        android:layout_marginBottom="34dp"
+        android:id="@+id/etLogin"
+        android:layout_above="@+id/etPassword"
+        android:layout_alignStart="@+id/etPassword"
+        android:textStyle="normal|bold"
+        android:textColor="@color/green" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:background="#febd9f"
+
+        android:ems="10"
+        android:layout_marginBottom="141dp"
+        android:id="@+id/etPassword"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textStyle="normal|bold"
+        android:textColor="@color/green" />
+
+    <TextView
+        android:text="Log in to the app"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/etLogin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="96dp"
+        android:id="@+id/textView4" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/hqdefault"
+        android:id="@+id/imageView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp" />
+
+    <TextView
+    android:text="Login"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/textView5"
+    android:textSize="30sp"
+    android:layout_above="@+id/etLogin"
+    android:layout_alignStart="@+id/etLogin" />
+
+    <Button
+        android:text="Zalogu się"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btLogin"
+        android:layout_marginTop="45dp"
+        android:layout_below="@+id/etLogin"
+        android:layout_alignStart="@+id/etPassword" />
+
+    <Button
+        android:text="Zarejestruj się"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btRegister"
+        android:layout_alignBaseline="@+id/btLogin"
+        android:layout_alignBottom="@+id/btLogin"
+        android:layout_toEndOf="@+id/btLogin" />
+
+    <TextView
+        android:text="Password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView6"
+        android:textSize="30sp"
+        android:layout_above="@+id/btLogin"
+        android:layout_alignEnd="@+id/textView4" />
+    " />
+</RelativeLayout>

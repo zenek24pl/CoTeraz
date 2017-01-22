@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <resources>
-    <color name="apptheme_color">#517a00</color>
+    <color name="apptheme_color">#9f007a5e</color>
     <color name="separator">#9f517a00</color>
+    <color name="red">#fbf22218</color>
+    <color name="green">#fb1cf218</color>
+    <color name="yellow">#fbf2ce18</color>
+    <color name="blue">#fb18d5f2</color>
 
     <color name="black_87p">#de000000</color>
     <color name="black_54p">#8a000000</color>
