@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import now.zaliczto.coteraz.R;
-import now.zaliczto.coteraz.main.fragments.LoginFragmen;
 import now.zaliczto.coteraz.main.fragments.MainWindowFragment;
 import now.zaliczto.coteraz.main.fragments.MapDetailsFragment;
 import now.zaliczto.coteraz.main.fragments.MapFragment;
@@ -73,28 +72,8 @@ public class MainActivity extends AppCompatActivity implements onFragmentClick {
         fragmentTransaction.commit();
 
     }
-    public void navigatetoDownload() {
 
 
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-
-        fragmentTransaction.replace(R.id.activity_root, DownloadActivity.newInstance());
-        fragmentTransaction.addToBackStack(null);
-        fragmentTransaction.commit();
-
-    }
-    public void navigatetoLogin() {
-
-
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-
-        fragmentTransaction.replace(R.id.activity_root, LoginFragmen.newInstance());
-        fragmentTransaction.addToBackStack(null);
-        fragmentTransaction.commit();
-
-    }
 
 
 

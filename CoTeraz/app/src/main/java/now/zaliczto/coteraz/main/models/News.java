@@ -13,13 +13,10 @@ import org.parceler.Parcel;
 import java.util.ArrayList;
 import java.util.List;
 
-import now.zaliczto.coteraz.main.database.MyDatabase;
-
 /**
  * Created by zeno on 2016-12-20.
  */
 @Parcel
-@Table(database = MyDatabase.class)
 
 public class News extends BaseModel implements Parcelable{
     @PrimaryKey

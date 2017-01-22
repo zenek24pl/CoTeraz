@@ -10,7 +10,6 @@ public interface onFragmentClick {
     void navigatetoMap();
     void navigatetoMarkerDetails(Bundle bundle);
     void navigatetoMain();
-    void navigatetoDownload();
-    void navigatetoLogin();
+
 
 }

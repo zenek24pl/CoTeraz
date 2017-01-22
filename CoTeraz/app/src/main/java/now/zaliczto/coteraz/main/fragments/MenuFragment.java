@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import now.zaliczto.coteraz.R;
-import now.zaliczto.coteraz.main.dialoged.NaviDialog;
+
 import now.zaliczto.coteraz.main.models.Image;
 import now.zaliczto.coteraz.main.models.News;
 import now.zaliczto.coteraz.main.onFragmentClick;
@@ -30,7 +30,6 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 import static now.zaliczto.coteraz.main.addons.Tools.showErrorToast;
-import static now.zaliczto.coteraz.main.fragments.LoginFragmen.czyprem;
 
 /**
  * Created by zeno on 2017-01-11.
@@ -108,33 +107,9 @@ public class MenuFragment extends Fragment implements View.OnClickListener {
                 Picasso.with(getActivity().getApplicationContext())
                     .load(item.src)
                     .into(imBored);}
-            if (!czyprem) {
-                NaviDialog returnDialFragment = new NaviDialog();
-                returnDialFragment.setStyle(NaviDialog.STYLE_NO_TITLE, android.R.style.Theme_Holo_Light_Dialog_NoActionBar_MinWidth);
-                returnDialFragment.show(getFragmentManager(), "return");
-            } else {
 
-                imRepair = (ImageView) view.findViewById(R.id.fixIv);
-                imMoney = (ImageView) view.findViewById(R.id.moneyIv);
-                if(item.name.equals("Money")){
 
-                    Picasso.with(getActivity().getApplicationContext())
-                        .load(item.src)
-                        .into(imMoney);}
-                if(item.name.equals("Repair")){
-
-                    Picasso.with(getActivity().getApplicationContext())
-                        .load(item.src)
-                        .into(imRepair);}
-                imRepair.setOnClickListener(this);
-                imMoney.setOnClickListener(this);
-                LinearLayout rep = (LinearLayout) view.findViewById(R.id.fragment_main_bot);
-                LinearLayout money = (LinearLayout) view.findViewById(R.id.fragment_main_botl);
-                rep.setVisibility(View.VISIBLE);
-                money.setVisibility(View.VISIBLE);
-            }
-        }
-    }
+    }}
     @Override
     public void onDetach() {
         super.onDetach();
@@ -161,14 +136,7 @@ public class MenuFragment extends Fragment implements View.OnClickListener {
                 choose=4;
                 mapListener.navigatetoMap();
                 break;
-            case R.id.fixIv:
-                choose=5;
-                mapListener.navigatetoMap();
-                break;
-            case R.id.moneyIv:
-                choose=6;
-                mapListener.navigatetoMap();
-                break;
+
         }}
 
     public void loadDataImg(){

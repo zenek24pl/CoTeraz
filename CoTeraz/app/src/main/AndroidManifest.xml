@@ -24,8 +24,6 @@
         <!-- PayU SDK configuration -->
         <activity android:name="com.payu.android.sdk.payment.ui.NewCardActivity" />
         <activity android:name="com.payu.android.sdk.payment.ui.PaymentMethodListActivity" />
-        <activity android:name=".main.activity.PaypalBuy" />
-        <activity android:name=".main.activity.ConfirmationActivity" />
 
 
         <activity
